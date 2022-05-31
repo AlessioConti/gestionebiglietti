@@ -17,7 +17,7 @@ import it.prova.gestionebiglietti.utility.UtilityBigliettoForm;
 @WebServlet("/ExecuteSearchBigliettoServlet")
 public class ExecuteSearchBigliettoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -25,7 +25,6 @@ public class ExecuteSearchBigliettoServlet extends HttpServlet {
 		String destinazioneInputParam = request.getParameter("destinazione");
 		String prezzoInputStringParam = request.getParameter("prezzo");
 		String dataStringParam = request.getParameter("data");
-
 
 		Biglietto bigliettoInstance = UtilityBigliettoForm.createBigliettoFromParams(provenienzaInputParam,
 				destinazioneInputParam, prezzoInputStringParam, dataStringParam);

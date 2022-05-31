@@ -1,4 +1,5 @@
 package it.prova.gestionebiglietti.dao;
+
 import java.util.List;
 
 import javax.persistence.EntityManager;

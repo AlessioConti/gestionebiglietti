@@ -22,19 +22,18 @@ public class UtilityBigliettoForm {
 
 		return result;
 	}
-	
+
 	public static boolean validateBigliettoBean(Biglietto bigliettoToBeValidated) {
 		// prima controlliamo che non siano vuoti i parametri
 		if (StringUtils.isBlank(bigliettoToBeValidated.getProvenienza())
 				|| StringUtils.isBlank(bigliettoToBeValidated.getDestinazione())
-				|| bigliettoToBeValidated.getPrezzo() == null 
-				|| bigliettoToBeValidated.getPrezzo() < 1
+				|| bigliettoToBeValidated.getPrezzo() == null || bigliettoToBeValidated.getPrezzo() < 1
 				|| bigliettoToBeValidated.getData() == null) {
 			return false;
 		}
 		return true;
 	}
-	
+
 	public static Date parseDateFromString(String dataArrivoStringParam) {
 		if (StringUtils.isBlank(dataArrivoStringParam))
 			return null;

@@ -17,14 +17,13 @@ import it.prova.gestionebiglietti.service.MyServiceFactory;
 @WebServlet("/ExecuteShowBigliettoServlet")
 public class ExecuteShowBigliettoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public ExecuteShowBigliettoServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
+	public ExecuteShowBigliettoServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String idBigliettoParam = request.getParameter("idBiglietto");
 
@@ -46,6 +45,5 @@ public class ExecuteShowBigliettoServlet extends HttpServlet {
 
 		request.getRequestDispatcher("/biglietto/show.jsp").forward(request, response);
 	}
-
 
 }

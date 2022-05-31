@@ -18,7 +18,7 @@ import it.prova.gestionebiglietti.service.MyServiceFactory;
 @WebServlet("/ExecuteDeleteBigliettoServlet")
 public class ExecuteDeleteBigliettoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String idBigliettoDaEliminare = request.getParameter("idBiglietto");

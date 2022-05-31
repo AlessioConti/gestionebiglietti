@@ -17,7 +17,6 @@ public class BigliettoServiceImpl implements BigliettoService {
 
 	}
 
-
 	public List<Biglietto> listAll() throws Exception {
 		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
 
@@ -32,7 +31,6 @@ public class BigliettoServiceImpl implements BigliettoService {
 			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
 		}
 	}
-
 
 	public Biglietto caricaSingoloElemento(Long idInput) throws Exception {
 		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
@@ -49,7 +47,6 @@ public class BigliettoServiceImpl implements BigliettoService {
 			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
 		}
 	}
-
 
 	public void aggiorna(Biglietto input) throws Exception {
 		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
@@ -71,7 +68,6 @@ public class BigliettoServiceImpl implements BigliettoService {
 		}
 	}
 
-
 	public void inserisciNuovo(Biglietto input) throws Exception {
 		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
 
@@ -92,7 +88,6 @@ public class BigliettoServiceImpl implements BigliettoService {
 		}
 
 	}
-
 
 	public void rimuovi(Biglietto input) throws Exception {
 		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
@@ -119,9 +114,9 @@ public class BigliettoServiceImpl implements BigliettoService {
 
 		try {
 			bigliettoDAO.setEntityManager(entityManager);
-			
+
 			return bigliettoDAO.findByExample(input);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
 		} finally {

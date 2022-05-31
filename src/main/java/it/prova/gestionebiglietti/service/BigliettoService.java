@@ -2,7 +2,6 @@ package it.prova.gestionebiglietti.service;
 
 import java.util.List;
 
-
 import it.prova.gestionebiglietti.dao.BigliettoDAO;
 import it.prova.gestionebiglietti.model.Biglietto;
 

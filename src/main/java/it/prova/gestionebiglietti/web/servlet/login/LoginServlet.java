@@ -10,26 +10,26 @@ import javax.servlet.http.HttpServletResponse;
 
 import it.prova.gestionebiglietti.model.Utente;
 
-
 /**
  * Servlet implementation class LoginServlet
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String loginInput = request.getParameter("inputUsername");
 		String passwordInput = request.getParameter("inputPassword");
-		
-		if(loginInput.equals("user") && passwordInput.equals("user")) {
+
+		if (loginInput.equals("user") && passwordInput.equals("user")) {
 			request.getSession().setAttribute("userInfo", new Utente(loginInput, passwordInput, "Admin", "User"));
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 			return;
 		}
-		
-		if(loginInput.equals("Alessio") && passwordInput.equals("Conti")) {
+
+		if (loginInput.equals("Alessio") && passwordInput.equals("Conti")) {
 			request.getSession().setAttribute("userInfo", new Utente(loginInput, passwordInput, "Classic", "User"));
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 			return;
@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 
 		request.setAttribute("messaggio", "Credenziali errate");
 		request.getRequestDispatcher("login.jsp").forward(request, response);
-		
+
 	}
 
 }
