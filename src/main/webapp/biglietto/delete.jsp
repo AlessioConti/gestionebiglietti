@@ -2,6 +2,8 @@
 <%@page import="it.prova.gestionebiglietti.model.Biglietto"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
  <head>
@@ -31,22 +33,22 @@
 					    <div class='card-body'>
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Provenienza</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getProvenienza() %></dd>
+							  <dd class="col-sm-9">${elimina_biglietto_attr.provenienza }</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Destinazione:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getDestinazione() %></dd>
+							  <dd class="col-sm-9">${elimina_biglietto_attr.destinazione }</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Prezzo:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getPrezzo() %></dd>
+							  <dd class="col-sm-9">${elimina_biglietto_attr.prezzo }</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Data:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getData()!=null? new SimpleDateFormat("dd/MM/yyyy").format(bigliettoInPagina.getData()):"N.D."  %></dd>
+							  <dd class="col-sm-9">${elimina_biglietto_attr.data}</dd>
 					    	</dl>
 					    	
 					    </div>
